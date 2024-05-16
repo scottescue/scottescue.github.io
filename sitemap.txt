@@ -3,5 +3,3 @@ layout:
 ---
 {% for page in site.pages %}
 {% unless page.url == "/404.html" or page.url == "/sitemap.txt" or page.url == "/robots.txt" %}{{site.url}}{{ page.url }}{% endunless %}{% endfor %}
-{% for post in site.posts %}
-{{site.url}}{{ post.url }}{% endfor %}
