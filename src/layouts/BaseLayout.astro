@@ -36,8 +36,11 @@ const canonicalUrl = new URL(canonicalPath, site.url);
 
     <title>{title}</title>
     <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" href="/favicon-96x96.png" sizes="96x96" type="image/png" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <meta name="apple-mobile-web-app-title" content={site.name} />
     <link rel="manifest" href="/site.webmanifest" />
 
     <meta property="og:type" content={type} />
