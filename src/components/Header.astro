@@ -1,0 +1,27 @@
+---
+interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
+const isActive = (path: string) =>
+  path === '/' ? currentPath === '/' : currentPath.startsWith(path);
+---
+
+<header class="site-header">
+  <div class="header-inner shell">
+    <a class="wordmark" href="/">
+      <span aria-hidden="true">SE</span>
+      <span class="wordmark-name">Scott Escue</span>
+    </a>
+
+    <nav aria-label="Primary navigation">
+      <a href="/" aria-current={isActive('/') ? 'page' : undefined}>Home</a>
+      <a
+        href="/projects/"
+        aria-current={isActive('/projects/') ? 'page' : undefined}>Projects</a
+      >
+      <a href="/resume.pdf">Resume</a>
+    </nav>
+  </div>
+</header>

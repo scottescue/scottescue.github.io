@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content';
+import ProjectCard from '../../components/ProjectCard.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const projects = (await getCollection('projects')).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+const description =
+  'Open-source projects by Scott Escue spanning Go data tooling and Java application integration.';
+---
+
+<BaseLayout title="Projects | Scott Escue" description={description}>
+  <header class="page-hero shell">
+    <p class="eyebrow">Open source</p>
+    <h1>Projects</h1>
+    <p>
+      Active experiments and maintained reference implementations focused on
+      useful engineering problems.
+    </p>
+  </header>
+
+  <section class="page-section shell" aria-label="Project list">
+    <div class="project-grid">
+      {projects.map((project) => <ProjectCard project={project} />)}
+    </div>
+  </section>
+</BaseLayout>

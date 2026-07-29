@@ -1,0 +1,15 @@
+---
+interface Props {
+  index: string;
+  title: string;
+  description: string;
+}
+
+const { index, title, description } = Astro.props;
+---
+
+<article class="capability-block">
+  <span class="capability-index" aria-hidden="true">{index}</span>
+  <h3>{title}</h3>
+  <p>{description}</p>
+</article>

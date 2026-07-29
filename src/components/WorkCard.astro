@@ -1,0 +1,17 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  technologies: string[];
+}
+
+const { title, description, technologies } = Astro.props;
+---
+
+<article class="work-block">
+  <h3>{title}</h3>
+  <p>{description}</p>
+  <ul class="tag-list" aria-label={`${title} technologies`}>
+    {technologies.map((technology) => <li>{technology}</li>)}
+  </ul>
+</article>

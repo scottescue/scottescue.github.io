@@ -1,0 +1,47 @@
+---
+import { site } from '../site';
+---
+
+<section class="hero" aria-labelledby="hero-title">
+  <img
+    class="hero-map"
+    src="/images/system-map.svg"
+    alt=""
+    width="760"
+    height="420"
+  />
+  <div class="hero-inner shell">
+    <p class="hero-role">Senior Software Engineer</p>
+    <h1 id="hero-title">Scott Escue</h1>
+    <p class="hero-lead">
+      I build and modernize cloud-native applications, identity platforms, and
+      developer tooling.
+    </p>
+    <p class="hero-detail">
+      My work spans Next.js and TypeScript applications, Java services and
+      extensions, enterprise authentication, AWS and Azure infrastructure, and
+      DevSecOps automation.
+    </p>
+    <div class="hero-actions" aria-label="Profile links">
+      <a
+        class="button button-primary"
+        href={site.github}
+        target="_blank"
+        rel="me noreferrer"
+      >
+        View GitHub
+      </a>
+      <a
+        class="button button-secondary"
+        href={site.linkedIn}
+        target="_blank"
+        rel="me noreferrer"
+      >
+        View LinkedIn
+      </a>
+      <a class="button button-quiet" href="/resume.pdf" download
+        >Download resume</a
+      >
+    </div>
+  </div>
+</section>
