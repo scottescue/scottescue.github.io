@@ -11,17 +11,32 @@ const description =
 ---
 
 <BaseLayout title="Projects | Scott Escue" description={description}>
-  <header class="page-hero shell">
-    <p class="eyebrow">Open source</p>
-    <h1>Projects</h1>
-    <p>
-      Active experiments and maintained reference implementations focused on
-      useful engineering problems.
-    </p>
+  <header class="page-hero page-hero-split shell">
+    <div>
+      <p class="eyebrow">Open source</p>
+      <h1>Projects</h1>
+      <p>
+        Active experiments and maintained reference implementations focused on
+        useful engineering problems.
+      </p>
+    </div>
+
+    <aside class="context-note" aria-label="Private client work">
+      <h2>About recent work</h2>
+      <p>
+        Most of my recent production work is in private client repositories,
+        including enterprise identity, learning-platform, cloud infrastructure,
+        and DevSecOps systems. The projects below represent selected public work
+        that reflects similar engineering themes.
+      </p>
+    </aside>
   </header>
 
-  <section class="page-section shell" aria-label="Project list">
-    <div class="project-grid">
+  <section
+    class="page-section project-list-section shell"
+    aria-label="Project list"
+  >
+    <div class="project-list">
       {projects.map((project) => <ProjectCard project={project} />)}
     </div>
   </section>
