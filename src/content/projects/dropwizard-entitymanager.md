@@ -1,11 +1,11 @@
 ---
 title: Dropwizard EntityManager
-summary: Managed JPA EntityManager integration for Dropwizard applications using Hibernate.
-context: Adapts Dropwizard Hibernate lifecycle and unit-of-work behavior for applications built around JPA EntityManager APIs.
+summary: JPA EntityManager integration for older Dropwizard/Hibernate applications.
+context: Preserved as a reference example of adapting Dropwizard Hibernate lifecycle behavior for applications built around JPA EntityManager APIs.
 repository: https://github.com/scottescue/dropwizard-entitymanager
 language: Java
 status: reference
-statusLabel: Reference project
+statusLabel: Unmaintained reference
 technologies:
   - Java
   - Dropwizard
@@ -15,10 +15,16 @@ order: 3
 featured: true
 ---
 
-Dropwizard EntityManager provides managed access to a Hibernate JPA `EntityManagerFactory` and a shareable, thread-safe `EntityManager` that works with Dropwizard Hibernate's `@UnitOfWork` annotation.
+Dropwizard EntityManager is an add-on module created for older Dropwizard applications that used JPA `EntityManager` APIs while still wanting managed lifecycle behavior compatible with Dropwizard Hibernate and `@UnitOfWork`.
+
+## Status
+
+This repository is preserved as a portfolio artifact and reference implementation. I do not actively maintain it, review dependency updates, or provide support for production use.
+
+Modern Dropwizard applications should start with the official `dropwizard-hibernate` module and current Dropwizard/Hibernate documentation before considering this approach.
 
 ## Design
 
-The module adapts Dropwizard Hibernate's lifecycle and unit-of-work integration for applications that use JPA's EntityManager APIs. It is preserved as a reference implementation for that integration pattern.
+The module adapts Dropwizard Hibernate's lifecycle and unit-of-work integration for applications built around JPA EntityManager APIs. It demonstrates how I approached framework extension when an application needed JPA-style access while still fitting into Dropwizard's request-scoped unit-of-work model.
 
-The project is licensed under Apache License 2.0.
+The project is licensed under the Apache License 2.0.
