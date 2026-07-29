@@ -639,6 +639,15 @@ h3 {
   color: #91a5b5;
 }
 
+.site-footer-compact .footer-inner {
+  padding-block: 28px;
+}
+
+.site-footer-compact .copyright {
+  padding-top: 0;
+  border-top: 0;
+}
+
 .page-hero {
   padding-block: 84px 64px;
   border-bottom: 1px solid var(--line);

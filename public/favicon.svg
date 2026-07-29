@@ -1,4 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SE">
-  <rect width="64" height="64" rx="8" fill="#102a43" />
-  <path d="M14 20h18v6H20v5h11v6H20v5h12v6H14V20Zm24 0h14v6h-8v5h7v6h-7v5h8v6H38V20Z" fill="#f7f8fa" />
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_4_2)">
+<rect width="512" height="512" fill="white"/>
+<path d="M440 0H72C32.2355 0 0 32.2355 0 72V440C0 479.764 32.2355 512 72 512H440C479.764 512 512 479.764 512 440V72C512 32.2355 479.764 0 440 0Z" fill="#061A34"/>
+<path d="M265 112H167C118 112 82 145 82 194C82 244 118 275 166 275H214C239 275 255 290 255 314C255 338 238 354 213 354H98V398H218C270 398 305 364 305 314C305 266 271 232 219 232H171C146 232 131 217 131 194C131 170 147 155 172 155H265V112Z" fill="white"/>
+<path d="M286 112H414V156H333V233H410V277H333V354H414V398H286V112Z" fill="white"/>
+<path d="M248.008 227C327.5 245.5 341.944 369.305 246.575 404.012" stroke="#061A34" stroke-width="17" stroke-linecap="round"/>
+</g>
+<defs>
+<clipPath id="clip0_4_2">
+<rect width="512" height="512" fill="white"/>
+</clipPath>
+</defs>
 </svg>

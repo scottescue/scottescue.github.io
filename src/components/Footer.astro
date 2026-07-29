@@ -1,20 +1,35 @@
 ---
 import { site } from '../site';
 
+interface Props {
+  compact?: boolean;
+}
+
+const { compact = false } = Astro.props;
 const year = new Date().getFullYear();
 ---
 
-<footer class="site-footer">
+<footer class:list={['site-footer', { 'site-footer-compact': compact }]}>
   <div class="footer-inner shell">
-    <div>
-      <p class="footer-name">Scott Escue</p>
-      <p>Senior Software Engineer</p>
-    </div>
-    <nav aria-label="Footer navigation">
-      <a href={`mailto:${site.email}`}>Email</a>
-      <a href={site.linkedIn} target="_blank" rel="me noreferrer">LinkedIn</a>
-      <a href={site.github} target="_blank" rel="me noreferrer">GitHub</a>
-    </nav>
+    {
+      !compact && (
+        <>
+          <div>
+            <p class="footer-name">Scott Escue</p>
+            <p>Senior Software Engineer</p>
+          </div>
+          <nav aria-label="Footer navigation">
+            <a href={`mailto:${site.email}`}>Email</a>
+            <a href={site.linkedIn} target="_blank" rel="me noreferrer">
+              LinkedIn
+            </a>
+            <a href={site.github} target="_blank" rel="me noreferrer">
+              GitHub
+            </a>
+          </nav>
+        </>
+      )
+    }
     <p class="copyright">&copy; {year} Scott Escue</p>
   </div>
 </footer>
