@@ -1,6 +1,7 @@
 # Astro build output and generated types
 /dist
 /.astro
+/.lighthouseci
 /node_modules
 
 # Local environment files
