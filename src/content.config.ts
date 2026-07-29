@@ -10,6 +10,7 @@ const projects = defineCollection({
   schema: z.object({
     title: z.string(),
     summary: z.string(),
+    context: z.string(),
     repository: z.url(),
     language: z.string(),
     status: z.enum(['active', 'maintenance', 'reference']),

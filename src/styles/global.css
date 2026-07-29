@@ -547,6 +547,10 @@ h3 {
   color: var(--muted);
 }
 
+.project-card-body > .project-card-context {
+  color: #3f5263;
+}
+
 .project-card .tag-list {
   margin-bottom: 26px;
 }
@@ -611,6 +615,10 @@ h3 {
 .project-list .project-card-body > p,
 .project-list .project-card .tag-list {
   margin-bottom: 0;
+}
+
+.project-list .project-card-body > p + p {
+  margin-top: 10px;
 }
 
 .project-list .project-card-meta {
