@@ -1,0 +1,40 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  eyebrow: string;
+  backHref: string;
+  backLabel: string;
+  type?: 'website' | 'article';
+}
+
+const {
+  title,
+  description,
+  eyebrow,
+  backHref,
+  backLabel,
+  type = 'website',
+} = Astro.props;
+---
+
+<BaseLayout
+  title={`${title} | Scott Escue`}
+  description={description}
+  type={type}
+>
+  <article class="content-page">
+    <header class="content-hero shell">
+      <a class="back-link" href={backHref}>{backLabel}</a>
+      <p class="eyebrow">{eyebrow}</p>
+      <h1>{title}</h1>
+      <p class="content-dek">{description}</p>
+      <slot name="meta" />
+    </header>
+    <div class="prose shell">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>

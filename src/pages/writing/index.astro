@@ -1,0 +1,43 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const articles = (
+  await getCollection('writing', ({ data }) => !data.draft)
+).sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf());
+const description =
+  'Technical writing by Scott Escue on software engineering and delivery.';
+---
+
+<BaseLayout title="Writing | Scott Escue" description={description}>
+  <header class="page-hero shell">
+    <p class="eyebrow">Writing</p>
+    <h1>Engineering notes</h1>
+    <p>Technical articles will appear here when they are ready to be useful.</p>
+  </header>
+
+  <section class="page-section shell" aria-label="Article list">
+    {
+      articles.length > 0 ? (
+        <ol class="article-list">
+          {articles.map((article) => (
+            <li>
+              <a href={`/writing/${article.id}/`}>{article.data.title}</a>
+              <p>{article.data.description}</p>
+              <time datetime={article.data.publishedAt.toISOString()}>
+                {article.data.publishedAt.toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric',
+                  timeZone: 'UTC',
+                })}
+              </time>
+            </li>
+          ))}
+        </ol>
+      ) : (
+        <p class="empty-state">No articles are published yet.</p>
+      )
+    }
+  </section>
+</BaseLayout>
