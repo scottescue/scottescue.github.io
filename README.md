@@ -54,6 +54,6 @@ Site-wide identity and contact links are centralized in `src/site.ts`. Replace `
 
 ## Deployment
 
-The workflow in `.github/workflows/deploy.yml` builds and deploys the static site whenever `master` is updated. The repository's GitHub Pages source must be set to **GitHub Actions**.
+The workflow in `.github/workflows/deploy.yml` builds and deploys the static site whenever `main` is updated. The repository's GitHub Pages source must be set to **GitHub Actions**.
 
 Astro is configured with `site: 'https://scottescue.com'`, and `public/CNAME` preserves the custom domain without a repository subpath. DNS remains managed outside this repository.
