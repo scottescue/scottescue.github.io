@@ -1,6 +1,7 @@
 ---
 title: Dropwizard EntityManager
 summary: Managed JPA EntityManager integration for Dropwizard applications using Hibernate.
+context: Adapts Dropwizard Hibernate lifecycle and unit-of-work behavior for applications built around JPA EntityManager APIs.
 repository: https://github.com/scottescue/dropwizard-entitymanager
 language: Java
 status: reference

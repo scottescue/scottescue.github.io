@@ -1,6 +1,7 @@
 ---
 title: Grizzle
 summary: An early-stage relational ORM and schema toolkit for Go, inspired by Drizzle ORM and Drizzle Kit concepts.
+context: Explores type-aware schema definition, SQL query construction, migration workflows, and code generation for Go applications.
 repository: https://github.com/sofired/grizzle
 language: Go
 status: active

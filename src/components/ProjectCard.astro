@@ -11,23 +11,31 @@ const Heading = headingLevel;
 ---
 
 <article class="project-card">
-  <div class="project-card-topline">
-    <span class="project-language">{project.data.language}</span>
-    <span class="project-status" data-status={project.data.status}
-      >{project.data.statusLabel}</span
-    >
+  <div class="project-card-body">
+    <div class="project-card-topline">
+      <span class="project-language">{project.data.language}</span>
+      <span class="project-status" data-status={project.data.status}
+        >{project.data.statusLabel}</span
+      >
+    </div>
+    <Heading>
+      <a href={`/projects/${project.id}/`}>{project.data.title}</a>
+    </Heading>
+    <p>{project.data.summary}</p>
+    <p class="project-card-context">{project.data.context}</p>
   </div>
-  <Heading>
-    <a href={`/projects/${project.id}/`}>{project.data.title}</a>
-  </Heading>
-  <p>{project.data.summary}</p>
-  <ul class="tag-list" aria-label={`${project.data.title} technologies`}>
-    {project.data.technologies.map((technology) => <li>{technology}</li>)}
-  </ul>
-  <div class="project-links">
-    <a href={`/projects/${project.id}/`}>Project details</a>
-    <a href={project.data.repository} target="_blank" rel="noopener noreferrer"
-      >Repository</a
-    >
+
+  <div class="project-card-meta">
+    <ul class="tag-list" aria-label={`${project.data.title} technologies`}>
+      {project.data.technologies.map((technology) => <li>{technology}</li>)}
+    </ul>
+    <div class="project-links">
+      <a href={`/projects/${project.id}/`}>Project details</a>
+      <a
+        href={project.data.repository}
+        target="_blank"
+        rel="noopener noreferrer">Repository</a
+      >
+    </div>
   </div>
 </article>

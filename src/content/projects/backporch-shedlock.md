@@ -1,6 +1,7 @@
 ---
 title: BackPorch ShedLock
 summary: A Java 6 and 7 backport of ShedLock for coordinating scheduled tasks across application nodes.
+context: Built for legacy systems that needed distributed locking without upgrading runtimes or replacing schedulers.
 repository: https://github.com/scottescue/backporch-shedlock
 language: Java
 status: reference
