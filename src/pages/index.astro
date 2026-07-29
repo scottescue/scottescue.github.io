@@ -19,14 +19,14 @@ const capabilities = [
       'Design authentication and authorization solutions using Keycloak, OAuth 2.0, OpenID Connect, SAML, LTI 1.3, and secure software-development practices.',
   },
   {
-    title: 'Cloud and Delivery',
+    title: 'Cloud and Platform Engineering',
     description:
-      'Deploy and operate software using AWS, Azure, Kubernetes, Docker, Terraform, CI/CD, and infrastructure automation.',
+      'Design and operate cloud-native delivery systems using AWS, Azure, Kubernetes, Docker, Terraform, CI/CD, and infrastructure automation.',
   },
   {
-    title: 'Developer Tooling',
+    title: 'Developer Platforms and AI Tooling',
     description:
-      'Create local-development environments, security utilities, deployment automation, and reusable tools that help engineers work faster and more reliably.',
+      'Create local-development environments, secure automation, agent-oriented tools, and reusable systems that help engineers work faster and more reliably.',
   },
 ] as const;
 
@@ -44,13 +44,13 @@ const selectedWork = [
     technologies: ['Next.js', 'Express', 'GraphQL', 'PostgreSQL'],
   },
   {
-    title: 'Cloud Modernization',
+    title: 'Cloud Platform Engineering',
     description:
-      'Migrated enterprise workloads to AWS GovCloud, AWS Fargate, and managed services while improving deployment automation, availability, security, and operational consistency.',
+      'Built and operated AWS GovCloud, AWS Fargate, and managed-service delivery paths while improving deployment automation, availability, security, and operational consistency.',
     technologies: ['AWS', 'Fargate', 'Terraform', 'CI/CD'],
   },
   {
-    title: 'Security Automation',
+    title: 'Security and Compliance Automation',
     description:
       'Built a Go CLI that packages containerized OpenSCAP scanning, detects the target OS, selects STIG profiles, generates compliance reports, and integrates with Jenkins and Azure Storage.',
     technologies: ['Go', 'OpenSCAP', 'Docker', 'Jenkins'],
@@ -73,7 +73,8 @@ const personSchema = {
     'Cloud-native applications',
     'Full-stack application engineering',
     'Enterprise identity and security',
-    'Developer tooling',
+    'Developer platforms',
+    'AI-agent infrastructure',
     'TypeScript',
     'Java',
     'AWS',
@@ -95,7 +96,7 @@ const personSchema = {
         </h2>
         <p>
           From product interfaces and service boundaries to identity,
-          infrastructure, and delivery.
+          infrastructure, delivery, and AI-assisted engineering systems.
         </p>
       </div>
     </div>
@@ -120,7 +121,7 @@ const personSchema = {
           <h2 id="work-title">Systems built for real operational demands</h2>
           <p>
             Representative work across applications, identity, cloud platforms,
-            and security tooling.
+            and secure automation.
           </p>
         </div>
       </div>
@@ -144,14 +145,18 @@ const personSchema = {
       <div>
         <h2 id="projects-title">Projects and reference implementations</h2>
         <p>
-          Practical tools and libraries spanning Go data tooling and Java
-          application integration.
+          Practical tools and reference implementations spanning Go data
+          tooling, Java application integration, and engineering automation.
         </p>
         <a class="section-link" href="/projects/">View all projects</a>
       </div>
     </div>
     <div class="project-grid">
-      {projects.map((project) => <ProjectCard project={project} />)}
+      {
+        projects.map((project) => (
+          <ProjectCard project={project} headingLevel="h3" />
+        ))
+      }
     </div>
   </section>
 
@@ -165,16 +170,19 @@ const personSchema = {
         <p>
           I&rsquo;m interested in senior software-engineering opportunities
           involving cloud-native applications, identity, developer platforms,
-          distributed systems, and complex engineering problems.
+          AI-agent infrastructure, distributed systems, and complex engineering
+          problems.
         </p>
         <div class="contact-links">
           <a class="button button-light" href={`mailto:${site.email}`}
             >Email Scott</a
           >
-          <a href={site.linkedIn} target="_blank" rel="me noreferrer"
+          <a href={site.linkedIn} target="_blank" rel="me noopener noreferrer"
             >LinkedIn</a
           >
-          <a href={site.github} target="_blank" rel="me noreferrer">GitHub</a>
+          <a href={site.github} target="_blank" rel="me noopener noreferrer"
+            >GitHub</a
+          >
         </div>
       </div>
     </div>
