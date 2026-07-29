@@ -3,9 +3,11 @@ import type { CollectionEntry } from 'astro:content';
 
 interface Props {
   project: CollectionEntry<'projects'>;
+  headingLevel?: 'h2' | 'h3';
 }
 
-const { project } = Astro.props;
+const { project, headingLevel = 'h2' } = Astro.props;
+const Heading = headingLevel;
 ---
 
 <article class="project-card">
@@ -15,14 +17,16 @@ const { project } = Astro.props;
       >{project.data.statusLabel}</span
     >
   </div>
-  <h2><a href={`/projects/${project.id}/`}>{project.data.title}</a></h2>
+  <Heading>
+    <a href={`/projects/${project.id}/`}>{project.data.title}</a>
+  </Heading>
   <p>{project.data.summary}</p>
   <ul class="tag-list" aria-label={`${project.data.title} technologies`}>
     {project.data.technologies.map((technology) => <li>{technology}</li>)}
   </ul>
   <div class="project-links">
     <a href={`/projects/${project.id}/`}>Project details</a>
-    <a href={project.data.repository} target="_blank" rel="noreferrer"
+    <a href={project.data.repository} target="_blank" rel="noopener noreferrer"
       >Repository</a
     >
   </div>

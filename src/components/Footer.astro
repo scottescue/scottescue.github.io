@@ -20,10 +20,14 @@ const year = new Date().getFullYear();
           </div>
           <nav aria-label="Footer navigation">
             <a href={`mailto:${site.email}`}>Email</a>
-            <a href={site.linkedIn} target="_blank" rel="me noreferrer">
+            <a
+              href={site.linkedIn}
+              target="_blank"
+              rel="me noopener noreferrer"
+            >
               LinkedIn
             </a>
-            <a href={site.github} target="_blank" rel="me noreferrer">
+            <a href={site.github} target="_blank" rel="me noopener noreferrer">
               GitHub
             </a>
           </nav>

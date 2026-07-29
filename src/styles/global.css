@@ -161,17 +161,10 @@ h3 {
   color: var(--navy);
 }
 
-.wordmark > span:first-child {
-  display: grid;
+.wordmark-logo {
   width: 34px;
   height: 34px;
-  place-items: center;
-  border: 1px solid var(--navy);
   border-radius: 4px;
-  background: var(--navy);
-  color: var(--paper);
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
 }
 
 .site-header nav,
@@ -238,8 +231,26 @@ h3 {
   padding-block: 92px 96px;
 }
 
-.hero-role {
+.hero-kicker {
+  display: flex;
+  align-items: center;
+  gap: 16px;
   margin-bottom: 20px;
+}
+
+.hero-avatar {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 auto;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--paper);
+  object-fit: cover;
+  object-position: center 24%;
+}
+
+.hero-role {
+  margin-bottom: 0;
   color: var(--blue);
   font-family: var(--font-mono);
   font-size: 0.9rem;
@@ -853,6 +864,11 @@ h3 {
     padding-block: 72px 76px;
   }
 
+  .hero-avatar {
+    width: 56px;
+    height: 56px;
+  }
+
   .hero h1 {
     font-size: 3.8rem;
   }
@@ -949,8 +965,17 @@ h3 {
     padding-block: 56px 62px;
   }
 
+  .hero-kicker {
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .hero-avatar {
+    width: 48px;
+    height: 48px;
+  }
+
   .hero-role {
-    margin-bottom: 16px;
     font-size: 0.76rem;
   }
 
