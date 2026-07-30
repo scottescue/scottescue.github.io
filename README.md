@@ -50,7 +50,7 @@ featured: true
 
 Writing uses the `writing` collection. Add articles under `src/content/writing/` with `title`, `description`, `publishedAt`, optional `updatedAt`, `draft`, and `topics` fields. The `/writing/` route is available but intentionally omitted from primary navigation until an article is published.
 
-Site-wide identity and contact links are centralized in `src/site.ts`. Replace `public/resume.pdf` when publishing a new resume.
+Site-wide identity and contact links are centralized in `src/site.ts`. Replace `public/Scott_Escue_Resume.pdf` when publishing a new resume.
 
 ## Deployment
 
